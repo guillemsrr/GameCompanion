@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.guillemserralorenz.twitchcompanion.models.TWStreamResponse
 import com.guillemserralorenz.twitchcompanion.network.ApiService
+import com.guillemserralorenz.twittercompanion.R
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
