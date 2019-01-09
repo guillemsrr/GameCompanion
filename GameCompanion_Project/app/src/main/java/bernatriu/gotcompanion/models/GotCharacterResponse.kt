@@ -6,6 +6,7 @@ data class GOTCharacter (
     @SerializedName("name") var  characterName : String? = null,
     @SerializedName("culture")    var culture: String? = null,
     @SerializedName("actor")      var actor: String? = null
+    //@SerializedName("message")      var messageErr: String? = null
     //var type: String? = null,
     //var title: String? = null,
     //@SerializedName("viewer_count")      var viewerCount: String? = null,

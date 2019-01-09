@@ -12,11 +12,11 @@ interface ApiService{
 
     @Headers("Client-ID: ry9mcpqp1kgx1yxi9z2zm42bedsso3")
     @GET("characters")
-    fun getStreams() : Call<GotCharacterResponse>
+    fun getCharacters() : Call<GotCharacterResponse>
 
     companion object {
         private var retrofit = Retrofit.Builder()
-            .baseUrl("https://api.got.show/api/characters/")
+            .baseUrl("https://api.got.show/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

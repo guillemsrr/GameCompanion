@@ -50,7 +50,7 @@ class CharactersFragment : Fragment() {
     }
 
     fun getApiData(){
-        ApiService.service.getStreams().enqueue(object : Callback<GotCharacterResponse> {
+        ApiService.service.getCharacters().enqueue(object : Callback<GotCharacterResponse> {
 
 
             override fun onResponse(call: Call<GotCharacterResponse>, response: Response<GotCharacterResponse>) {
@@ -65,14 +65,15 @@ class CharactersFragment : Fragment() {
 
                 } ?: kotlin.run{
                     //ERROR
-                    Log.w("MainActivity","characters error on fetching")
+                    Log.w("MainActivity","characters error on fetching - fetched nothing?")
 
                 }
             }
 
             override fun onFailure(call: Call<GotCharacterResponse>, t: Throwable) {
 
-                Log.e("MainActivity", "Error getting streams")
+                Log.e("MainActivity", "Error getting chaaracters")
+                Log.e("Man",t.message)
             }
 
         })
