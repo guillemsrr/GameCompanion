@@ -11,7 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import bernatriu.gotcompanion.R
-import bernatriu.gotcompanion.models.GotCharacterResponse
+import bernatriu.gotcompanion.models.GOTCharacter
 import bernatriu.gotcompanion.network.ApiService
 import retrofit2.Call
 import retrofit2.Callback
@@ -50,17 +50,17 @@ class CharactersFragment : Fragment() {
     }
 
     fun getApiData(){
-        ApiService.service.getCharacters().enqueue(object : Callback<GotCharacterResponse> {
+        ApiService.service.getCharacters().enqueue(object : Callback<ArrayList<GOTCharacter>> {
 
 
-            override fun onResponse(call: Call<GotCharacterResponse>, response: Response<GotCharacterResponse>) {
+            override fun onResponse(call: Call<ArrayList<GOTCharacter>>, response: Response<ArrayList<GOTCharacter>>) {
                 Log.w("MainActivity","characters fetched")
 
-                response.body()?.data?.let {streams ->
+                response.body()?.let {characters ->
 
                     // Iterate Streams
-                    for(stream in streams){
-                        Log.e("MainActivity","Character with name ${stream.characterName} and actor ${stream.actor}")
+                    for(character in characters){
+                        Log.e("MainActivity","Character with name ${character.characterName}, father ${character.father}, house ${character.house}")
                     }
 
                 } ?: kotlin.run{
@@ -70,10 +70,10 @@ class CharactersFragment : Fragment() {
                 }
             }
 
-            override fun onFailure(call: Call<GotCharacterResponse>, t: Throwable) {
+            override fun onFailure(call: Call<ArrayList<GOTCharacter>>, t: Throwable) {
 
                 Log.e("MainActivity", "Error getting chaaracters")
-                Log.e("Man",t.message)
+                Log.e("MainActivity",t.message)
             }
 
         })
