@@ -1,0 +1,2 @@
+package bernatriu.gotcompanion.Fragments
+
