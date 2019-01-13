@@ -43,9 +43,7 @@ class CharactersFragment : Fragment() {
         super.onCreate(savedInstanceState)
         Log.w("MainActivity","preparing to get characters")
         //getApiData()
-        getCharacter("Hodor")
-        getCharacter("Jon Snow")
-        getCharacter("petrucas")
+        getApiData()
 
 
     }
@@ -103,7 +101,7 @@ class CharactersFragment : Fragment() {
                 response.body()?.data?.let {character ->
 
 
-                    Log.e("MainActivity","Character with name ${character.characterName}, father ${character.father}, house ${character.house}")
+                    Log.e("MainActivity","Character with name ${character.name}, father ${character.father}, house ${character.house}")
 
 
 
