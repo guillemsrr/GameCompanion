@@ -64,6 +64,13 @@ class CharacterAdapter(var list: ArrayList<GOTCharacter>,var fragmentActivity: C
             try{
                 val characterIntent = Intent(viewHolder.button.context, CharacterActivity::class.java)
                 characterIntent.putExtra("character",character.name)
+                characterIntent.putExtra("father",character.father)
+                characterIntent.putExtra("mother",character.mother)
+                characterIntent.putExtra("culture",character.culture)
+                characterIntent.putExtra("actor",character.actor)
+                characterIntent.putExtra("image",character.image)
+                characterIntent.putExtra("house",character.house)
+                characterIntent.putExtra("message",character.message)
                 viewHolder.button.context.startActivity(characterIntent)
 
             }catch(e: Exception){
