@@ -6,6 +6,7 @@
              xmlns:app="http://schemas.android.com/apk/res-auto"
              tools:context=".Fragments.CharactersFragment"
              android:background="@color/character_bckg">
+
     <RelativeLayout
             android:id="@+id/finder"
             android:layout_width="match_parent"
@@ -43,5 +44,17 @@
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/finder_height"
             app:layout_constraintEnd_toEndOf = "parent"/>
+
+    <TextView
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:text="No-one found with this name"
+            android:textSize="@dimen/character_name"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/finder_height_plus_margin"
+            android:id="@+id/emptyWarn"
+            android:visibility="gone"
+
+
+    />
 
 </FrameLayout>

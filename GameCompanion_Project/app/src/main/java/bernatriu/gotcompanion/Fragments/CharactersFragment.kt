@@ -38,12 +38,18 @@ private const val ARG_PARAM2 = "param2"
  */
 class CharactersFragment : Fragment() {
 
+    var list: ArrayList<GOTCharacter> = arrayListOf()
+    var viewList: ArrayList<GOTCharacter> = arrayListOf()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.w("MainActivity","preparing to get characters")
         //getApiData()
-        getApiData()
+        getApiData() // get and draw
+
+
+
 
 
     }
@@ -56,12 +62,37 @@ class CharactersFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_characters, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        findButton.setOnClickListener{
+
+            if(findText.text.toString().isEmpty()){
+                Log.w("MainActivity","input empty")
+                viewList = list
+            }
+            else{
+                viewList = selectCharactersbyName(list,findText.text.toString())
+
+
+                if(viewList.isEmpty()){
+                    emptyWarn.visibility = View.VISIBLE
+                }
+                else{
+                    emptyWarn.visibility = View.GONE
+                }
+            }
+            drawRecyclerView()
+        }
+
+
+    }
+
     private fun getApiData(){
         ApiService.service.getCharacters().enqueue(object : Callback<ArrayList<GOTCharacter>> {
 
             override fun onResponse(call: Call<ArrayList<GOTCharacter>>, response: Response<ArrayList<GOTCharacter>>) {
                 Log.w("MainActivity","characters fetched")
-                val list = ArrayList<GOTCharacter>()
                 response.body()?.let {characters ->
                     // Iterate Streams
                     for(character in characters){
@@ -70,18 +101,15 @@ class CharactersFragment : Fragment() {
                             list.add(character)
                         }
                     }
+                    viewList = list
+                    drawRecyclerView()
+
+
                 } ?: kotlin.run{
                     //ERROR
                     Log.w("MainActivity","characters error on fetching - fetched nothing?")
                 }
-                activity?.let{
 
-
-
-
-                    characters_list.adapter = CharacterAdapter(list)
-                    characters_list.layoutManager = LinearLayoutManager(activity)
-                }
             }
 
             override fun onFailure(call: Call<ArrayList<GOTCharacter>>, t: Throwable) {
@@ -107,6 +135,17 @@ class CharactersFragment : Fragment() {
 
         }
         return selectedItems
+    }
+
+    fun drawRecyclerView(){
+
+        activity?.let{
+
+            Log.w("MainActivity","Loaded RecyclerView")
+            characters_list.adapter = CharacterAdapter(viewList)
+            characters_list.layoutManager = LinearLayoutManager(activity)
+
+        }
     }
 
 
