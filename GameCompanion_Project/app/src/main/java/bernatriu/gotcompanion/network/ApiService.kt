@@ -1,12 +1,13 @@
 package bernatriu.gotcompanion.network
 
+import bernatriu.gotcompanion.Models.GOTEpisode
 import bernatriu.gotcompanion.models.GOTCharacter
 import bernatriu.gotcompanion.models.GOTHouse
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Headers
+import retrofit2.http.Path
 
 interface ApiService{
 
@@ -17,6 +18,12 @@ interface ApiService{
     @GET("houses")
     fun getHouses() : Call<ArrayList<GOTHouse>>
 
+    @GET("episodes")
+    fun getEpisodes(): Call<ArrayList<GOTEpisode>>
+
+    /*@GET ("characters/{name}")
+    fun getCharacterByName(@Path("name") String name) : Call<GOTCharacter>*/
+
     companion object {
         private var retrofit = Retrofit.Builder()
             .baseUrl("https://api.got.show/api/")
@@ -24,6 +31,7 @@ interface ApiService{
             .build()
 
         val service = retrofit.create<ApiService>(ApiService::class.java)
+
     }
 
 
