@@ -7,4 +7,5 @@
     <color name="color_character_name">#000000</color>
     <color name="transparent">#00ffffff</color>
     <color name="specific_character_bckg">#86725c</color>
+    <color name="episode_number">#ffffff</color>
 </resources>

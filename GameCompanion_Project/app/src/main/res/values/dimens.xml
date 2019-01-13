@@ -13,4 +13,5 @@
     <dimen name="findText_margin">8dp</dimen>
     <dimen name="specific_layout_margin_top">30dp</dimen>
     <dimen name="image_top">30dp</dimen>
+    <dimen name="episode_number">150dp</dimen>
 </resources>
