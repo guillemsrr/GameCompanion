@@ -13,7 +13,8 @@ import retrofit2.Response
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions
-import kotlinx.android.synthetic.main.activity_episode.*
+import kotlinx.android.synthetic.main.activity_house.*
+
 
 class HouseActivity : AppCompatActivity() {
 
