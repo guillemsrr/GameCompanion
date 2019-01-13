@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.simple_house.view.*
 import java.lang.Exception
 import java.util.ArrayList
 
-class HouseAdapter(var list: ArrayList<GOTHouse>,var fragmentActivity: HousesFragment): RecyclerView.Adapter<HouseAdapter.HouseViewHolder>(){
+class HouseAdapter(var list: ArrayList<GOTHouse>): RecyclerView.Adapter<HouseAdapter.HouseViewHolder>(){
 
     public var OnItemClickListener: OnItemClickListener<GOTHouse>?=null
 
@@ -53,12 +53,8 @@ class HouseAdapter(var list: ArrayList<GOTHouse>,var fragmentActivity: HousesFra
         viewHolder.button.setOnClickListener {
             try{
                 val intent = Intent(viewHolder.button.context, HouseActivity::class.java)
-                intent.putExtra("name",element.houseName)
-                intent.putExtra("lord",element.lord)
-                intent.putExtra("words",element.words)
-                intent.putExtra("region",element.region)
-                intent.putExtra("overlord",element.overlord)
-                intent.putExtra("coatOfArms",element.coatOfArms)
+                intent.putExtra("house",element.houseName)
+
                 viewHolder.button.context.startActivity(intent)
 
             }catch(e: Exception){

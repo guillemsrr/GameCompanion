@@ -12,7 +12,6 @@ import bernatriu.gotcompanion.R
 import bernatriu.gotcompanion.adapters.HouseAdapter
 import bernatriu.gotcompanion.models.GOTHouse
 import bernatriu.gotcompanion.network.ApiService
-import kotlinx.android.synthetic.main.fragment_characters.*
 import kotlinx.android.synthetic.main.fragment_houses.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -34,6 +33,9 @@ private const val ARG_PARAM2 = "param2"
  */
 class HousesFragment : Fragment() {
 
+    var list: ArrayList<GOTHouse> = arrayListOf()
+    var viewList: ArrayList<GOTHouse> = arrayListOf()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -49,11 +51,36 @@ class HousesFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_houses, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        findButton.setOnClickListener{
+
+            if(findText.text.toString().isEmpty()){
+                Log.w("MainActivity","input empty")
+                viewList = list
+            }
+            else{
+                viewList = selectHousesbyName(list,findText.text.toString())
+
+
+                if(viewList.isEmpty()){
+                    emptyWarn.visibility = View.VISIBLE
+                }
+                else{
+                    emptyWarn.visibility = View.GONE
+                }
+            }
+            drawRecyclerView()
+        }
+
+
+    }
+
     fun getApiData(){
         ApiService.service.getHouses().enqueue(object : Callback<ArrayList<GOTHouse>> {
             override fun onResponse(call: Call<ArrayList<GOTHouse>>, response: Response<ArrayList<GOTHouse>>) {
                 Log.w("MainActivity","characters fetched")
-                val list = ArrayList<GOTHouse>()
                 response.body()?.let {houses ->
 
                     // Iterate Streams
@@ -67,10 +94,8 @@ class HousesFragment : Fragment() {
                     //ERROR
                     Log.w("MainActivity","houses error on fetching - fetched nothing?")
                 }
-                activity?.let{
-                    houses_list.adapter = HouseAdapter(list,this@HousesFragment)
-                    houses_list.layoutManager = LinearLayoutManager(activity)
-                }
+                viewList = list
+                drawRecyclerView()
             }
 
             override fun onFailure(call: Call<ArrayList<GOTHouse>>, t: Throwable) {
@@ -80,6 +105,32 @@ class HousesFragment : Fragment() {
             }
 
         })
+    }
+
+    fun selectHousesbyName(originalList : ArrayList<GOTHouse>, search: String) : ArrayList<GOTHouse>{
+
+        var selectedItems : ArrayList<GOTHouse> = arrayListOf()
+
+        for (houses in originalList){
+            houses.houseName?.let { housesS ->
+                if(housesS.contains(search)){
+                    selectedItems.add(houses)
+                }
+
+            }
+
+        }
+        return selectedItems
+    }
+    fun drawRecyclerView(){
+
+        activity?.let{
+
+            Log.w("MainActivity","Loaded RecyclerView")
+            houses_list.adapter = HouseAdapter(viewList)
+            houses_list.layoutManager = LinearLayoutManager(activity)
+
+        }
     }
 
 }

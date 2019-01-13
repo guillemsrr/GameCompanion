@@ -9,12 +9,7 @@ data class GOTCharacter (
     @SerializedName("imageLink")      var image: String? = null,
     @SerializedName("mother")      var mother: String? = null,
     @SerializedName("father")      var father: String? = null,
-    @SerializedName("house")      var house: String? = null,
-    @SerializedName("message")      var message: String? = null
-
-
-
-
+    @SerializedName("house")      var house: String? = null
 
     //@SerializedName("message")      var messageErr: String? = null
     //var type: String? = null,
