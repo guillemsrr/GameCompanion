@@ -36,6 +36,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Lord name"
+                        android:background="@color/clickable"
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
             </LinearLayout>
@@ -94,6 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Overlord name"
+                        android:background="@color/clickable"
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
             </LinearLayout>
@@ -146,7 +148,7 @@
                 android:textSize="@dimen/character_name"
                 android:textColor="@color/color_character_name"
                 android:layout_marginTop="@dimen/specific_layout_margin_top"
-                android:layout_marginLeft="100dp"/>
+                android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
 

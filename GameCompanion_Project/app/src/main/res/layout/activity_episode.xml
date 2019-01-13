@@ -111,6 +111,7 @@
                         android:id="@+id/nextEpisode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@color/clickable"
                         android:text="nextEpisode name"
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>

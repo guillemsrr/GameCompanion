@@ -1,5 +1,6 @@
 package bernatriu.gotcompanion.activities
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,9 +26,12 @@ class EpisodeActivity : AppCompatActivity() {
 
        getEpisode(intent.getStringExtra("episode"))
 
-        //Log.w("MainActivity","preparing to open up specific episode: ${episode_name}")
+        nextEpisode.setOnClickListener {
+            val characterIntent = Intent(this@EpisodeActivity, EpisodeActivity::class.java)
+            characterIntent.putExtra("episode",Episode?.nextEpisode)
 
-        //getEpisode(episode_name)
+            startActivity(characterIntent)
+        }
     }
 
     fun getEpisode(name : String) {
