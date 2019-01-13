@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_marginTop="@dimen/character_padding"
+        android:layout_marginBottom="@dimen/character_padding"
+        android:layout_marginEnd="@dimen/character_padding"
+        android:layout_marginStart="@dimen/character_padding">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+            android:id="@+id/houseButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/wildtextures_medieval">
+
+            <ImageView
+                    android:id="@+id/house_image"
+                    android:layout_width="200dp"
+                    android:layout_height="@dimen/character_simple_image_height"
+                    android:layout_below="@id/houseName"
+                    android:src="@drawable/default_character_image"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="@dimen/character_padding"
+                    android:layout_marginEnd="@dimen/character_padding"
+                    android:layout_marginStart="@dimen/character_padding"/>
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sword_title"
+                android:layout_marginTop="-20dp"/>
+
+        <TextView
+                android:id="@+id/houseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "@string/house_name"
+                android:textSize="@dimen/character_name"
+                android:textColor="@color/color_character_name"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"/>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

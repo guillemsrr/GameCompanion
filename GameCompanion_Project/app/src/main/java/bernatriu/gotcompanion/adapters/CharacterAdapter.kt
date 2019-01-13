@@ -33,17 +33,6 @@ class CharacterAdapter(var list: ArrayList<GOTCharacter>,var fragmentActivity: C
         return list.count()
     }
 
-    /*companion object {
-        fun newInstance(characterName: String): SpecificCharacterFragment {
-            val fragment = SpecificCharacterFragment()
-            val args = Bundle()
-            args.putString("character", characterName)
-            Log.w("CharacterFragment","Introduced ${characterName} to open fragment")
-            fragment.setArguments(args)
-            return fragment
-        }
-    }*/
-
     override fun onBindViewHolder(viewHolder: CharacterViewHolder, position: Int) {
         val character = list[position]
         viewHolder.name.text = character.name;
