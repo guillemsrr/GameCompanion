@@ -80,7 +80,7 @@ class HouseActivity : AppCompatActivity() {
             overlord.text = "unknown"
         coat_arms.text = House?.coatOfArms
         if(House?.coatOfArms == null)
-            coat_arms.text = "coatOfArms"
+            coat_arms.text = "unknown"
 
         if(House?.image != null){
             Glide

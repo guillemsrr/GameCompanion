@@ -35,18 +35,9 @@ class EpisodeAdapter(var list: ArrayList<GOTEpisode>): RecyclerView.Adapter<Epis
     override fun onBindViewHolder(viewHolder: EpisodeViewHolder, position: Int) {
         val episode = list[position]
         viewHolder.name.text = episode.episodeName;
-        if(episode.image!=null){
-            Glide
-                .with(viewHolder.image.context)
-                //.load(character.image)
-                .load("https://api.got.show/" + episode.image)
-                .apply(
-                    RequestOptions()
-                        .transforms(CenterCrop())
-                        .placeholder(R.drawable.default_character_image)
-                )
-                .into(viewHolder.image)
-        }
+        viewHolder.number.text = episode.number.toString();
+        viewHolder.season.text = episode.season.toString();
+
         //buttons:
         viewHolder.button.setOnClickListener {
             try{
@@ -63,7 +54,8 @@ class EpisodeAdapter(var list: ArrayList<GOTEpisode>): RecyclerView.Adapter<Epis
 
     class EpisodeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         var name: TextView = itemView.episode_name
-        var image: ImageView = itemView.episode_image
+        var number: TextView = itemView.episode_number
+        var season: TextView = itemView.episode_season
         var button: Button = itemView.episodeButton
     }
 }
