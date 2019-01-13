@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.CharacterActivity"
+        tools:context=".activities.HouseActivity"
         android:background="@color/specific_character_bckg">
 
     <RelativeLayout
@@ -28,33 +28,14 @@
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Lord: "
+                        android:text="Number: "
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
                 <TextView
-                        android:id="@+id/lord"
+                        android:id="@+id/number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Lord name"
-                        android:textSize="@dimen/character_text"
-                        android:textColor="@color/color_character_name"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Words: "
-                        android:textSize="@dimen/character_text"
-                        android:textColor="@color/color_character_name"/>
-                <TextView
-                        android:id="@+id/words"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Words"
+                        android:text="Number episode"
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
             </LinearLayout>
@@ -62,18 +43,37 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="@dimen/specific_layout_margin_top">
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Region: "
+                        android:text="Season: "
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
                 <TextView
-                        android:id="@+id/region"
+                        android:id="@+id/season"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Region name"
+                        android:text="Season name"
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/specific_layout_margin_top">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Air Date: "
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+                <TextView
+                        android:id="@+id/airDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="airDate date"
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
             </LinearLayout>
@@ -82,18 +82,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="@dimen/specific_layout_margin_top">
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Overlord: "
+                        android:text="Director: "
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
                 <TextView
-                        android:id="@+id/overlord"
+                        android:id="@+id/director"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Overlord name"
+                        android:text="director name"
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
             </LinearLayout>
@@ -102,39 +102,38 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="@dimen/specific_layout_margin_top">
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Coat of Arms: "
+                        android:text="Next Episode: "
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
                 <TextView
-                        android:id="@+id/coat_arms"
+                        android:id="@+id/nextEpisode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Coat of Arms name"
+                        android:text="nextEpisode name"
                         android:textSize="@dimen/character_text"
                         android:textColor="@color/color_character_name"/>
             </LinearLayout>
-
 
         </LinearLayout>
 
         <ImageView
-                android:id="@+id/house_image"
+                android:id="@+id/episode_image"
                 android:layout_width="140dp"
                 android:layout_height="200dp"
                 android:layout_below="@id/characterName"
                 android:src="@drawable/default_character_image"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="90dp"
                 android:layout_marginLeft="220dp"
                 android:layout_marginRight="20dp"/>
 
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/sword_title"
+                android:src="@drawable/ribbon"
                 android:layout_marginTop="-20dp"/>
 
 
@@ -145,8 +144,8 @@
                 android:text = "@string/house_name"
                 android:textSize="@dimen/character_name"
                 android:textColor="@color/color_character_name"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="40dp"/>
+                android:layout_marginTop="@dimen/specific_layout_margin_top"
+                android:layout_marginLeft="100dp"/>
 
     </RelativeLayout>
 

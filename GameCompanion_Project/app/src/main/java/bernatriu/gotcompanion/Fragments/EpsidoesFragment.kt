@@ -1,7 +1,5 @@
 package bernatriu.gotcompanion.Fragments
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -30,7 +28,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  *
  */
-class placesFragment : Fragment() {
+class EpisodesFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +42,7 @@ class placesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_places, container, false)
+        return inflater.inflate(R.layout.fragment_episodes, container, false)
     }
 
     fun getApiData(){

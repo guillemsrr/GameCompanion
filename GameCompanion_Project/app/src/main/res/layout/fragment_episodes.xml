@@ -4,7 +4,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              xmlns:app="http://schemas.android.com/apk/res-auto"
-             tools:context=".Fragments.HousesFragment"
+             tools:context=".Fragments.EpisodesFragment"
              android:background="@color/character_bckg">
     <RelativeLayout
             android:id="@+id/finder"
@@ -19,7 +19,7 @@
                 android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_oval"
-                android:hint="@string/find_text_hint_houses"
+                android:hint="@string/find_text_hint_episodes"
                 android:padding="5dp"
                 android:layout_marginTop="@dimen/findText_margin"
                 android:layout_marginLeft="20dp"
@@ -43,15 +43,5 @@
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/finder_height"
             app:layout_constraintEnd_toEndOf = "parent"/>
-    <TextView
-            android:layout_width="match_parent" android:layout_height="match_parent"
-            android:text="No house found with this name"
-            android:textSize="@dimen/character_name"
-            android:textAlignment="center"
-            android:layout_marginTop="@dimen/finder_height_plus_margin"
-            android:id="@+id/emptyWarn"
-            android:visibility="gone"
-
-    />
 
 </FrameLayout>

@@ -9,6 +9,8 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="character_name">Character Name</string>
     <string name="house_name">House Name</string>
+    <string name="episode_name">Episode Name</string>
     <string name="find_text_hint">Find Character</string>
     <string name="find_text_hint_houses">Find House</string>
+    <string name="find_text_hint_episodes">Find Episodes</string>
 </resources>
