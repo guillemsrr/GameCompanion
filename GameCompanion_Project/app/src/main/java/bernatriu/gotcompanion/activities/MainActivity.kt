@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import bernatriu.gotcompanion.Fragments.CharactersFragment
-import bernatriu.gotcompanion.Fragments.familiesFragment
+import bernatriu.gotcompanion.Fragments.HousesFragment
 import bernatriu.gotcompanion.Fragments.placesFragment
 import bernatriu.gotcompanion.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_dashboard -> {
                     Log.w("pere","dash")
 
-                    fragment = familiesFragment()
+                    fragment = HousesFragment()
                     //message.setText(R.string.title_dashboard)
 
                 }

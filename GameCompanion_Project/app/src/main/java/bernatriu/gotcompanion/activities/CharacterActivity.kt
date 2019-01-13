@@ -3,13 +3,23 @@ package bernatriu.gotcompanion.activities
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.RecyclerView
 import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import bernatriu.gotcompanion.R
 import bernatriu.gotcompanion.models.GOTCharacterSearch
 import bernatriu.gotcompanion.network.ApiService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.request.RequestOptions
+import kotlinx.android.synthetic.main.activity_character.*
+import kotlinx.android.synthetic.main.simple_character.view.*
 
 class CharacterActivity : AppCompatActivity() {
 
@@ -17,15 +27,41 @@ class CharacterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character)
 
-            var character_name = intent.getStringExtra("character")
+            characterName.text = intent.getStringExtra("character")
+            father.text = intent.getStringExtra("father")
+            if(intent.getStringExtra("father") == null)
+                father.text = "unknown"
 
-            Log.w("MainActivity","preparing to get specific characters: ${character_name}")
+            mother.text = intent.getStringExtra("mother")
+            if(intent.getStringExtra("mother") == null)
+                mother.text = "unknown"
 
-            getCharacter(character_name)
+            house.text = intent.getStringExtra("house")
+            if(intent.getStringExtra("house") == null)
+                house.text = "unknown"
+
+            culture.text = intent.getStringExtra("culture")
+            if(intent.getStringExtra("culture") == null)
+                culture.text = "unknown"
+
+            message.text = intent.getStringExtra("message")
+            if(intent.getStringExtra("message") == null)
+                message.text = "unknown"
 
 
-
-
+        if(intent.getStringExtra("image")!=null){
+            Glide
+                .with(character_image.context)
+                //.load(character.image)
+                .load("https://api.got.show/" + intent.getStringExtra("image"))
+                .apply(
+                    RequestOptions()
+                        .transforms(CenterCrop())
+                        .placeholder(R.drawable.default_character_image)
+                )
+                .into(character_image)
+        }
+            //Log.e("CharacterFragment", "there is no bundle!")
     }
 
     fun getCharacter(name : String){

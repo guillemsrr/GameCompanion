@@ -5,7 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.CharacterActivity">
+        tools:context=".activities.CharacterActivity"
+        android:background="@color/specific_character_bckg">
 
     <RelativeLayout
             android:layout_width="match_parent"
@@ -15,24 +16,127 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/specific_character_bckg">
+                android:layout_below="@+id/characterName"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="40dp">
 
-            <ImageView
-                    android:id="@+id/character_image"
-                    android:layout_width="140dp"
-                    android:layout_height="200dp"
-                    android:layout_below="@id/characterName"
-                    android:src="@drawable/default_character_image"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginLeft="220dp"
-                    android:layout_marginRight="70dp"/>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="0dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Father: "
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+                <TextView
+                        android:id="@+id/father"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Father name"
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mother: "
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+                <TextView
+                        android:id="@+id/mother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mother name"
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Culture: "
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+                <TextView
+                        android:id="@+id/culture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Culture name"
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="House: "
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+                <TextView
+                        android:id="@+id/house"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="House name"
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Message: "
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+                <TextView
+                        android:id="@+id/message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Message name"
+                        android:textSize="@dimen/character_text"
+                        android:textColor="@color/color_character_name"/>
+            </LinearLayout>
+
+
         </LinearLayout>
+
+        <ImageView
+                android:id="@+id/character_image"
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/characterName"
+                android:src="@drawable/default_character_image"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginRight="20dp"/>
 
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/sword_title"
                 android:layout_marginTop="-20dp"/>
+
 
         <TextView
                 android:id="@+id/characterName"
