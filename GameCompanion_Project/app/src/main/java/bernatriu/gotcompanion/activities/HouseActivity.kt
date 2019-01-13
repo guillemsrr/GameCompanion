@@ -13,7 +13,7 @@ import retrofit2.Response
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions
-import kotlinx.android.synthetic.main.activity_house.*
+import kotlinx.android.synthetic.main.activity_episode.*
 
 class HouseActivity : AppCompatActivity() {
 
@@ -24,13 +24,7 @@ class HouseActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_house)
 
-
         getHouse(intent.getStringExtra("house"))
-
-
-        
-
-
     }
 
 
@@ -62,11 +56,8 @@ class HouseActivity : AppCompatActivity() {
 
                 Log.e("MainActivity", "Error getting house by name")
                 Log.e("MainActivity",t.message)
-
             }
-
         })
-
     }
 
     fun drawCharacteristics(){
@@ -103,11 +94,5 @@ class HouseActivity : AppCompatActivity() {
                 .into(house_image)
             Log.w("MainActivity","House image link: ${House?.image}")
         }
-
-
     }
-
-
-
-
 }
