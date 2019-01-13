@@ -18,7 +18,6 @@ import retrofit2.Response
 
 class SpecificCharacterFragment : Fragment() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.w("CharacterFragment","preparing to get specific characters")

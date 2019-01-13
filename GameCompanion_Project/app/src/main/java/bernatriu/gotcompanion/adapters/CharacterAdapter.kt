@@ -63,10 +63,6 @@ class CharacterAdapter(var list: ArrayList<GOTCharacter>,var fragmentActivity: C
                     fragmentTransaction.replace(R.id.fragmentContainer, SpecificCharacterFragment())
                     fragmentTransaction.commit()
                 }
-
-                //val intent = Intent(viewHolder.button.context, SpecificCharacterFragment::class.java)
-                //intent.putExtra()
-                //viewHolder.button.context.startActivity(intent)
             }catch(e: Exception){
                 //Log(e.toString())
             }
