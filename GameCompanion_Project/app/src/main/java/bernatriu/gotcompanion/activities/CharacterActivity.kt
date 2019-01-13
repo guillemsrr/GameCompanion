@@ -1,9 +1,11 @@
 package bernatriu.gotcompanion.activities
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.RecyclerView
+import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import android.widget.Button
@@ -33,6 +35,18 @@ class CharacterActivity : AppCompatActivity() {
         getCharacter(intent.getStringExtra("character"))
             //Log.e("CharacterFragment", "there is no bundle!")
     }
+
+    override fun onCreateView(name: String?, context: Context?, attrs: AttributeSet?): View? {
+        return super.onCreateView(name, context, attrs)
+
+        father.setOnClickListener {
+            val characterIntent = Intent(this@CharacterActivity, CharacterActivity::class.java)
+            characterIntent.putExtra("character",Character?.father)
+
+            startActivity(characterIntent)
+        }
+    }
+
 
     fun getCharacter(name : String){
 

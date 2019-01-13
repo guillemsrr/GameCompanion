@@ -36,7 +36,7 @@ interface ApiService{
     fun getHouseByName(@Path("name") name: String ) : Call<GOTHouseSearch>
 
     //GET EPISODE BY NAME
-    @GET ("houses/{name}")
+    @GET ("episodes/{name}")
     fun getEpisodeByName(@Path("name") name: String ) : Call<GOTEpisodeSearch>
 
     companion object {

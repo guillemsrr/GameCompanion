@@ -3,24 +3,31 @@ package bernatriu.gotcompanion.activities
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import bernatriu.gotcompanion.Models.GOTEpisode
 import bernatriu.gotcompanion.Models.GOTEpisodeSearch
 import bernatriu.gotcompanion.R
 import bernatriu.gotcompanion.network.ApiService
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.request.RequestOptions
+import kotlinx.android.synthetic.main.activity_episode.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class EpisodeActivity : AppCompatActivity() {
 
+    var Episode: GOTEpisode? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_episode)
 
-        var episode_name = intent.getStringExtra("episode")
+       getEpisode(intent.getStringExtra("episode"))
 
-        Log.w("MainActivity","preparing to open up specific episode: ${episode_name}")
+        //Log.w("MainActivity","preparing to open up specific episode: ${episode_name}")
 
-        getEpisode(episode_name)
+        //getEpisode(episode_name)
     }
 
     fun getEpisode(name : String) {
@@ -35,6 +42,8 @@ class EpisodeActivity : AppCompatActivity() {
                         "MainActivity",
                         "Episode with name ${episode.episodeName}, Number ${episode.season}-${episode.number}, characters ${episode.characters}"
                     )
+                    Episode = episode
+                    drawCharacteristics()
 
                 } ?: kotlin.run {
                     //ERROR
@@ -48,5 +57,33 @@ class EpisodeActivity : AppCompatActivity() {
                 Log.e("MainActivity", t.message)
             }
         })
+    }
+
+    fun drawCharacteristics(){
+
+
+        episode_name.text = Episode?.episodeName
+        number.text = Episode?.number.toString()
+        if(Episode?.number == null)
+            number.text = "unknown"
+
+        season.text = Episode?.season.toString()
+        if(Episode?.season == null)
+            season.text = "unknown"
+
+        airDate.text = Episode?.airDate.toString()
+        if(Episode?.airDate == null)
+            airDate.text = "unknown"
+
+        director.text = Episode?.director
+        if(Episode?.director == null)
+            director.text = "unknown"
+        nextEpisode.text = Episode?.nextEpisode
+        if(Episode?.nextEpisode == null)
+            nextEpisode.text = "unknown"
+
+        Log.w("MainActivity","DRawn characteristics")
+
+
     }
 }

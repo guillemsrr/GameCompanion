@@ -8,7 +8,7 @@ data class GOTEpisode (
     @SerializedName("season")    var season: Int? = null,
     @SerializedName("nr")      var number: Int? = null,
     @SerializedName("imageLink")      var image: String? = null,
-    @SerializedName("airDate")      var region: Date? = null,
+    @SerializedName("airDate")      var airDate: Date? = null,
     @SerializedName("successor")      var nextEpisode: String? = null,
     @SerializedName("director")      var director: String? = null,
     @SerializedName("characters")   var characters: ArrayList<String?>? = null
