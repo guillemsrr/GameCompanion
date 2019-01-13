@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import bernatriu.gotcompanion.Fragments.CharactersFragment
+import bernatriu.gotcompanion.Fragments.EpisodesFragment
 import bernatriu.gotcompanion.Fragments.HousesFragment
-import bernatriu.gotcompanion.Fragments.placesFragment
 import bernatriu.gotcompanion.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.navigation_notifications -> {
                     Log.w("pere","fita")
-                    fragment = placesFragment()
+                    fragment = EpisodesFragment()
                     //message.setText(R.string.title_notifications)
 
                 }

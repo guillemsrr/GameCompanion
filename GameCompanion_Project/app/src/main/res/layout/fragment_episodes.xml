@@ -4,7 +4,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              xmlns:app="http://schemas.android.com/apk/res-auto"
-             tools:context=".Fragments.HousesFragment"
+             tools:context=".Fragments.EpisodesFragment"
              android:background="@color/character_bckg">
     <RelativeLayout
             android:id="@+id/finder"
@@ -38,7 +38,7 @@
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
-            android:id="@+id/houses_list"
+            android:id="@+id/episodes_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/finder_height"
