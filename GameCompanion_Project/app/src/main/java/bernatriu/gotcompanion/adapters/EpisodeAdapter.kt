@@ -15,6 +15,7 @@ import bernatriu.gotcompanion.utils.OnItemClickListener
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions
+import kotlinx.android.synthetic.main.simple_episode.view.*
 import java.lang.Exception
 import java.util.ArrayList
 
@@ -61,8 +62,8 @@ class EpisodeAdapter(var list: ArrayList<GOTEpisode>): RecyclerView.Adapter<Epis
     }
 
     class EpisodeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        var name: TextView = itemView.characterName
-        var image: ImageView = itemView.character_image
-        var button: Button = itemView.characterButton
+        var name: TextView = itemView.episode_name
+        var image: ImageView = itemView.episode_image
+        var button: Button = itemView.episodeButton
     }
 }

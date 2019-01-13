@@ -28,7 +28,8 @@
                 android:name=".activities.HouseActivity"
                 android:parentActivityName=".activities.MainActivity">
         </activity>
-        <activity android:name=".activities.EpisodeActivity">
+        <activity android:name=".activities.EpisodeActivity"
+                  android:parentActivityName=".activities.MainActivity">
         </activity>
     </application>
 

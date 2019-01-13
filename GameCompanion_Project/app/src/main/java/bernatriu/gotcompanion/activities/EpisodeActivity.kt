@@ -16,7 +16,7 @@ class EpisodeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_episode)
 
-        var episode_name = intent.getStringExtra("house")
+        var episode_name = intent.getStringExtra("episode")
 
         Log.w("MainActivity","preparing to open up specific episode: ${episode_name}")
 

@@ -12,7 +12,7 @@ import bernatriu.gotcompanion.Models.GOTEpisode
 import bernatriu.gotcompanion.R
 import bernatriu.gotcompanion.adapters.EpisodeAdapter
 import bernatriu.gotcompanion.network.ApiService
-import kotlinx.android.synthetic.main.fragment_houses.*
+import kotlinx.android.synthetic.main.fragment_episodes.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -129,7 +129,7 @@ class EpisodesFragment : Fragment() {
 
             Log.w("MainActivity","Loaded RecyclerView")
             episodes_list.adapter = EpisodeAdapter(viewList)
-            characters_list.layoutManager = LinearLayoutManager(activity)
+            episodes_list.layoutManager = LinearLayoutManager(activity)
 
         }
     }
