@@ -20,8 +20,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CharacterActivity"
-        android:parentActivityName=".activities.MainActivity">
+        <activity
+                android:name=".activities.CharacterActivity"
+                android:parentActivityName=".activities.MainActivity">
+        </activity>
+        <activity
+                android:name=".activities.HouseActivity"
+                android:parentActivityName=".activities.MainActivity">
+        </activity>
+        <activity android:name=".activities.EpisodeActivity">
         </activity>
     </application>
 
