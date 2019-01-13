@@ -9,7 +9,9 @@ data class GOTCharacter (
     @SerializedName("imageLink")      var image: String? = null,
     @SerializedName("mother")      var mother: String? = null,
     @SerializedName("father")      var father: String? = null,
-    @SerializedName("house")      var house: String? = null
+    @SerializedName("house")      var house: String? = null,
+    @SerializedName("message")      var message: String? = null
+
 
 
 
@@ -22,19 +24,14 @@ data class GOTCharacter (
 
 
 
+)
 
-){
 
-    //fun getImageUrl(): String? {
-    //    return image?.replace("{width}x{height}","500x500")
-    //}
-}
+data class GOTCharacterSearch(
+    var message: String? = null,
+    var data: GOTCharacter? = null
+)
 
-//
-//data class GotCharacterResponse(
-//    var data: ArrayList<GOTCharacter>? = null
-//)
-//
 //data class GotCharacterResponseObject(
 //    var obj: GotCharacterResponse? = null
 //)

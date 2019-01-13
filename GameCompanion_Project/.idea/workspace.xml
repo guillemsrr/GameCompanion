@@ -35,8 +35,8 @@
       <file leaf-file-name="CharactersFragment.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/CharactersFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="79" column="5" selection-start-line="51" selection-start-column="4" selection-end-line="79" selection-end-column="5" />
+            <state relative-caret-position="517">
+              <caret line="113" column="47" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
               <folding>
                 <element signature="e#43#480#0" expanded="true" />
               </folding>
@@ -44,11 +44,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Main2Activity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/activities/Main2Activity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="familiesFragment.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/familiesFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="78" column="5" selection-start-line="50" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
+            <state relative-caret-position="216">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#42#479#0" expanded="true" />
               </folding>
@@ -68,11 +77,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GOTHouse.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GOTHouse.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="placesFragment.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/placesFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+            <state relative-caret-position="583">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="e#42#429#0" expanded="true" />
               </folding>
@@ -83,17 +101,8 @@
       <file leaf-file-name="GotCharacterResponse.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GotCharacterResponse.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GOTHouse.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GOTHouse.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="297">
+              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -101,10 +110,10 @@
       <file leaf-file-name="ApiService.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/network/ApiService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="427">
+              <caret line="34" column="63" lean-forward="true" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
               <folding>
-                <element signature="e#40#367#0" expanded="true" />
+                <element signature="e#40#365#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2493,9 +2502,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GOTHouse.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/familiesFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GOTEpisode.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/placesFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/activities/Main2Activity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/familiesFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GotCharacterResponse.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/CharactersFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/network/ApiService.kt" />
       </list>
     </option>
@@ -2714,16 +2726,16 @@
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1609808" side_tool="true" visible="true" weight="0.30411255" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.25746268" side_tool="true" visible="true" weight="0.28030303" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.5952381" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.74626863" weight="0.20670995" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.7425373" visible="true" weight="0.28030303" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1433902" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.8390192" visible="true" weight="0.30411255" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1433902" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.8358209" weight="0.30411255" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -2803,7 +2815,7 @@
         <state relative-caret-position="187">
           <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding>
-            <element signature="e#40#367#0" expanded="true" />
+            <element signature="e#40#365#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2870,44 +2882,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GotCharacterResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GOTHouse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/familiesFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="78" column="5" selection-start-line="50" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="e#42#479#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/CharactersFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="79" column="5" selection-start-line="51" selection-start-column="4" selection-end-line="79" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#480#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/placesFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+        <state relative-caret-position="583">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
           <folding>
             <element signature="e#42#429#0" expanded="true" />
           </folding>
@@ -2924,12 +2902,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/activities/Main2Activity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GOTHouse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/familiesFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#42#479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Models/GotCharacterResponse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/Fragments/CharactersFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="113" column="47" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
+          <folding>
+            <element signature="e#43#480#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/bernatriu/gotcompanion/network/ApiService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state relative-caret-position="427">
+          <caret line="34" column="63" lean-forward="true" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
           <folding>
-            <element signature="e#40#367#0" expanded="true" />
+            <element signature="e#40#365#0" expanded="true" />
           </folding>
         </state>
       </provider>
