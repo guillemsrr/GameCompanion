@@ -16,13 +16,23 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SpecificCharacterFragment : Fragment() {
+class SpecificCharacterFragment() : Fragment() {
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        savedInstanceState?.let{
+            val character_name = savedInstanceState?.getString("character")
+            Log.w("CharacterFragment","preparing to get specific characters: ${character_name}")
+        } ?: kotlin.run{
+            Log.e("CharacterFragment", "there is no bundle!")
+        }
         super.onCreate(savedInstanceState)
-        Log.w("CharacterFragment","preparing to get specific characters")
-        getApiData()
+
+
+        //getApiData()
     }
 
     override fun onCreateView(
@@ -33,7 +43,7 @@ class SpecificCharacterFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_characters, container, false)
     }
 
-    fun getApiData(){
+    /*fun getApiData(){
         ApiService.service.getCharacters().enqueue(object : Callback<ArrayList<GOTCharacter>> {
 
             override fun onResponse(call: Call<ArrayList<GOTCharacter>>, response: Response<ArrayList<GOTCharacter>>) {
@@ -62,6 +72,6 @@ class SpecificCharacterFragment : Fragment() {
             }
 
         })
-    }
+    }*/
 
 }

@@ -1,7 +1,9 @@
 package bernatriu.gotcompanion.adapters
 
 import android.content.Intent
+import android.os.Bundle
 import android.support.v4.app.FragmentActivity
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,6 +17,7 @@ import bernatriu.gotcompanion.Fragments.SpecificCharacterFragment
 import bernatriu.gotcompanion.Fragments.familiesFragment
 import bernatriu.gotcompanion.R
 import bernatriu.gotcompanion.R.id.parent
+import bernatriu.gotcompanion.activities.CharacterActivity
 import bernatriu.gotcompanion.models.GOTCharacter
 import bernatriu.gotcompanion.utils.OnItemClickListener
 import com.bumptech.glide.Glide
@@ -37,6 +40,17 @@ class CharacterAdapter(var list: ArrayList<GOTCharacter>,var fragmentActivity: C
         return list.count()
     }
 
+    /*companion object {
+        fun newInstance(characterName: String): SpecificCharacterFragment {
+            val fragment = SpecificCharacterFragment()
+            val args = Bundle()
+            args.putString("character", characterName)
+            Log.w("CharacterFragment","Introduced ${characterName} to open fragment")
+            fragment.setArguments(args)
+            return fragment
+        }
+    }*/
+
     override fun onBindViewHolder(viewHolder: CharacterViewHolder, position: Int) {
         val character = list[position]
         viewHolder.name.text = character.name;
@@ -55,14 +69,26 @@ class CharacterAdapter(var list: ArrayList<GOTCharacter>,var fragmentActivity: C
         //buttons:
         viewHolder.button.setOnClickListener {
             try{
-                val fragmentManager = fragmentActivity.activity?.supportFragmentManager
+                val characterIntent = Intent(viewHolder.button.context, CharacterActivity::class.java)
+                characterIntent.putExtra("character",character.name)
+                viewHolder.button.context.startActivity(characterIntent)
+
+                // FRAGMENT CHARACTER PASS
+                /*val fragmentManager = fragmentActivity.activity?.supportFragmentManager
 
                 fragmentManager?.let {
+                    character.name?.let {nameConfirmed ->
 
-                    val fragmentTransaction = fragmentManager.beginTransaction()
-                    fragmentTransaction.replace(R.id.fragmentContainer, SpecificCharacterFragment())
-                    fragmentTransaction.commit()
-                }
+
+
+                        val fragmentTransaction = fragmentManager.beginTransaction()
+
+                        fragmentTransaction.replace(R.id.fragmentContainer, newInstance(nameConfirmed))
+                        fragmentTransaction.commit()
+
+                    }
+                }*/
+
 
                 //val intent = Intent(viewHolder.button.context, SpecificCharacterFragment::class.java)
                 //intent.putExtra()
