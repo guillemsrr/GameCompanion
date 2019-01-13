@@ -53,7 +53,7 @@ class CharactersFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_characters, container, false)
     }
 
-    fun getApiData(){
+    private fun getApiData(){
         ApiService.service.getCharacters().enqueue(object : Callback<ArrayList<GOTCharacter>> {
 
             override fun onResponse(call: Call<ArrayList<GOTCharacter>>, response: Response<ArrayList<GOTCharacter>>) {
@@ -62,8 +62,10 @@ class CharactersFragment : Fragment() {
                 response.body()?.let {characters ->
                     // Iterate Streams
                     for(character in characters){
-                        Log.e("MainActivity","Character with name ${character.name}, father ${character.father}, house ${character.house}")
-                        list.add(character)
+                        if(character.image != null){
+                            Log.e("MainActivity","Character with name ${character.name}, father ${character.father}, house ${character.house}")
+                            list.add(character)
+                        }
                     }
                 } ?: kotlin.run{
                     //ERROR

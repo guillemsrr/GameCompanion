@@ -1,23 +1,18 @@
-package bernatriu.gotcompanion.Fragments
+package bernatriu.gotcompanion.activities
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import bernatriu.gotcompanion.R
-import bernatriu.gotcompanion.adapters.CharacterAdapter
 import bernatriu.gotcompanion.models.GOTCharacter
 import bernatriu.gotcompanion.network.ApiService
-import kotlinx.android.synthetic.main.fragment_characters.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SpecificCharacterFragment : Fragment() {
-
+class SpecificCharacterActivity {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,5 +58,4 @@ class SpecificCharacterFragment : Fragment() {
 
         })
     }
-
 }

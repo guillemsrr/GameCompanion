@@ -29,10 +29,11 @@
 
             <ImageView
                     android:id="@+id/character_image"
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_height="@dimen/character_simple_image_height"
                     android:layout_below="@id/characterName"
                     android:src="@drawable/default_character_image"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/character_padding"
                     android:layout_marginBottom="@dimen/character_padding"
                     android:layout_marginEnd="@dimen/character_padding"
