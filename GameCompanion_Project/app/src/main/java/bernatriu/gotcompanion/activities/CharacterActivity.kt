@@ -46,9 +46,10 @@ class CharacterActivity : AppCompatActivity() {
         }
         mother.setOnClickListener {
 
-            Character?.mother?.let {mother ->
+            Character?.mother?.let {mothere ->
+
                 val characterIntent = Intent(this@CharacterActivity, CharacterActivity::class.java)
-                characterIntent.putExtra("character", mother)
+                characterIntent.putExtra("character", mothere)
 
                 startActivity(characterIntent)
             }

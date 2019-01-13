@@ -27,10 +27,13 @@ class EpisodeActivity : AppCompatActivity() {
        getEpisode(intent.getStringExtra("episode"))
 
         nextEpisode.setOnClickListener {
-            val characterIntent = Intent(this@EpisodeActivity, EpisodeActivity::class.java)
-            characterIntent.putExtra("episode",Episode?.nextEpisode)
 
-            startActivity(characterIntent)
+            Episode?.nextEpisode?.let { nextE ->
+                val characterIntent = Intent(this@EpisodeActivity, EpisodeActivity::class.java)
+                characterIntent.putExtra("episode", nextE)
+
+                startActivity(characterIntent)
+            }
         }
     }
 
