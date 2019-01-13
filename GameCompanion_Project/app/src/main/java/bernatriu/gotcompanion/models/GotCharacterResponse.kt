@@ -3,7 +3,7 @@ package bernatriu.gotcompanion.models
 import com.google.gson.annotations.SerializedName
 
 data class GOTCharacter (
-    @SerializedName("name") var  characterName : String? = null,
+    @SerializedName("name") var  name : String? = null,
     @SerializedName("culture")    var culture: String? = null,
     @SerializedName("actor")      var actor: String? = null,
     @SerializedName("imageLink")      var image: String? = null,
