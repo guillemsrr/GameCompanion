@@ -8,4 +8,5 @@
     <color name="transparent">#00ffffff</color>
     <color name="specific_character_bckg">#86725c</color>
     <color name="episode_number">#ffffff</color>
+    <color name="clickable">#f9ebc5</color>
 </resources>

@@ -50,7 +50,7 @@
                 android:text="@string/character_name"
                 android:textSize="@dimen/character_name"
                 android:textColor="@color/color_character_name"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/character_padding"
                 android:layout_marginLeft="40dp"/>
 
     </RelativeLayout>
