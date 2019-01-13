@@ -31,7 +31,7 @@
                 android:layout_below="@id/characterName"
                 android:src="@drawable/default_character_image"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="@dimen/image_top"
                 android:layout_marginBottom="@dimen/character_padding"
                 android:layout_marginEnd="@dimen/character_padding"
                 android:layout_marginStart="@dimen/character_padding"/>

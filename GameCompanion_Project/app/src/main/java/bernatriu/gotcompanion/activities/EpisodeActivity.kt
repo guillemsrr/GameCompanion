@@ -21,31 +21,24 @@ class EpisodeActivity : AppCompatActivity() {
         Log.w("MainActivity","preparing to open up specific episode: ${episode_name}")
 
         getEpisode(episode_name)
-
     }
 
     fun getEpisode(name : String) {
 
         ApiService.service.getEpisodeByName(name).enqueue(object : Callback<GOTEpisodeSearch> {
-
-
             override fun onResponse(call: Call<GOTEpisodeSearch>, response: Response<GOTEpisodeSearch>) {
                 Log.w("MainActivity", "episode by name fetched")
 
-
                 response.body()?.data?.let { episode ->
-
 
                     Log.e(
                         "MainActivity",
                         "Episode with name ${episode.episodeName}, Number ${episode.season}-${episode.number}, characters ${episode.characters}"
                     )
 
-
                 } ?: kotlin.run {
                     //ERROR
                     Log.w("MainActivity", "episode error on fetching by name- fetched nothing?")
-
                 }
             }
 
@@ -53,11 +46,7 @@ class EpisodeActivity : AppCompatActivity() {
 
                 Log.e("MainActivity", "Error getting episode by name")
                 Log.e("MainActivity", t.message)
-
             }
-
         })
-
     }
-
 }

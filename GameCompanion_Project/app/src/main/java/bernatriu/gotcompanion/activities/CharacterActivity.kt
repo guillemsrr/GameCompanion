@@ -44,10 +44,6 @@ class CharacterActivity : AppCompatActivity() {
             if(intent.getStringExtra("culture") == null)
                 culture.text = "unknown"
 
-            message.text = intent.getStringExtra("message")
-            if(intent.getStringExtra("message") == null)
-                message.text = "unknown"
-
 
         if(intent.getStringExtra("image")!=null){
             Glide

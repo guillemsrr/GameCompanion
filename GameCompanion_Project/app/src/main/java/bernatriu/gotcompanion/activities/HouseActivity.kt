@@ -27,39 +27,21 @@ class HouseActivity : AppCompatActivity() {
         Log.w("MainActivity","preparing to open up specific house: ${house_name}")
 
         getHouse(house_name)
-        
-                houseName.text = intent.getStringExtra("name")
-        if(intent.getStringExtra("name") == null)
-            houseName.text = "unknown"
-        lord.text = intent.getStringExtra("lord")
-        if(intent.getStringExtra("lord") == null)
-            lord.text = "unknown"
-        words.text = intent.getStringExtra("words")
-        if(intent.getStringExtra("words") == null)
-            words.text = "unknown"
-        region.text = intent.getStringExtra("region")
-        if(intent.getStringExtra("region") == null)
-            region.text = "unknown"
-        overlord.text = intent.getStringExtra("overlord")
-        if(intent.getStringExtra("overlord") == null)
-            overlord.text = "unknown"
-        coat_arms.text = intent.getStringExtra("coatOfArms")
-        if(intent.getStringExtra("coatOfArms") == null)
-            coat_arms.text = "coatOfArms"
 
 
-        if(intent.getStringExtra("image")!=null){
-            Glide
-                .with(house_image.context)
-                //.load(character.image)
-                .load("https://api.got.show/" + intent.getStringExtra("image"))
-                .apply(
-                    RequestOptions()
-                        .transforms(CenterCrop())
-                        .placeholder(R.drawable.default_character_image)
-                )
-                .into(house_image)
-        }
+
+//        if(intent.getStringExtra("image")!=null){
+//            Glide
+//                .with(house_image.context)
+//                //.load(character.image)
+//                .load("https://api.got.show/" + intent.getStringExtra("image"))
+//                .apply(
+//                    RequestOptions()
+//                        .transforms(CenterCrop())
+//                        .placeholder(R.drawable.default_character_image)
+//                )
+//                .into(house_image)
+//        }
 
     }
 
