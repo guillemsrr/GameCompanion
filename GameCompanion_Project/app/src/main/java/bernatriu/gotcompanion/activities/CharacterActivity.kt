@@ -34,10 +34,6 @@ class CharacterActivity : AppCompatActivity() {
 
         getCharacter(intent.getStringExtra("character"))
             //Log.e("CharacterFragment", "there is no bundle!")
-    }
-
-    override fun onCreateView(name: String?, context: Context?, attrs: AttributeSet?): View? {
-        return super.onCreateView(name, context, attrs)
 
         father.setOnClickListener {
             val characterIntent = Intent(this@CharacterActivity, CharacterActivity::class.java)
@@ -46,6 +42,7 @@ class CharacterActivity : AppCompatActivity() {
             startActivity(characterIntent)
         }
     }
+
 
 
     fun getCharacter(name : String){
