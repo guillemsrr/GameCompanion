@@ -68,4 +68,6 @@ class HouseAdapter(var list: ArrayList<GOTHouse>): RecyclerView.Adapter<HouseAda
         var image: ImageView = itemView.house_image
         var button: Button = itemView.houseButton
     }
+
+
 }

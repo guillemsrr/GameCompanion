@@ -36,10 +36,32 @@ class CharacterActivity : AppCompatActivity() {
             //Log.e("CharacterFragment", "there is no bundle!")
 
         father.setOnClickListener {
-            val characterIntent = Intent(this@CharacterActivity, CharacterActivity::class.java)
-            characterIntent.putExtra("character",Character?.father)
 
-            startActivity(characterIntent)
+            Character?.father?.let {fath ->
+                val characterIntent = Intent(this@CharacterActivity, CharacterActivity::class.java)
+                characterIntent.putExtra("character", fath)
+
+                startActivity(characterIntent)
+            }
+        }
+        mother.setOnClickListener {
+
+            Character?.mother?.let {mother ->
+                val characterIntent = Intent(this@CharacterActivity, CharacterActivity::class.java)
+                characterIntent.putExtra("character", mother)
+
+                startActivity(characterIntent)
+            }
+        }
+        house.setOnClickListener {
+
+
+            Character?.house?.let {hou ->
+                val houseIntent = Intent(this@CharacterActivity, HouseActivity::class.java)
+                houseIntent.putExtra("house", hou)
+
+                startActivity(houseIntent)
+            }
         }
     }
 
@@ -115,6 +137,7 @@ class CharacterActivity : AppCompatActivity() {
                 .into(character_image)
         }
     }
+
 
 
 }

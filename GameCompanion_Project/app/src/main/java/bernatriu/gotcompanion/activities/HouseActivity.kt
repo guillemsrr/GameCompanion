@@ -1,5 +1,6 @@
 package bernatriu.gotcompanion.activities
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -26,6 +27,28 @@ class HouseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_house)
 
         getHouse(intent.getStringExtra("house"))
+
+
+        lord.setOnClickListener {
+
+            House?.lord?.let {lord ->
+                val characterIntent = Intent(this@HouseActivity, CharacterActivity::class.java)
+                characterIntent.putExtra("character", lord)
+
+                startActivity(characterIntent)
+            }
+        }
+        overlord.setOnClickListener {
+
+
+            House?.overlord?.let {overlord ->
+                val houseIntent = Intent(this@HouseActivity, HouseActivity::class.java)
+                houseIntent.putExtra("house", overlord)
+
+                startActivity(houseIntent)
+            }
+        }
+
     }
 
 
@@ -48,7 +71,8 @@ class HouseActivity : AppCompatActivity() {
 
                 } ?: kotlin.run{
                     //ERROR
-                    Log.w("MainActivity","house error on fetching by name- fetched nothing?")
+                    Log.e("MainActivity","House not found,  closing")
+                    finishActivity(0)
 
                 }
             }
