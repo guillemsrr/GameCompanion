@@ -40,4 +40,8 @@ class familiesFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_families, container, false)
     }
 
+    fun openCharacterFragment(){
+
+    }
+
 }

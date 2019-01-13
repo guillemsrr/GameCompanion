@@ -1,3 +1,4 @@
+/*
 package bernatriu.gotcompanion.activities
 
 import android.os.Bundle
@@ -58,4 +59,4 @@ class SpecificCharacterActivity {
 
         })
     }
-}
+}*/

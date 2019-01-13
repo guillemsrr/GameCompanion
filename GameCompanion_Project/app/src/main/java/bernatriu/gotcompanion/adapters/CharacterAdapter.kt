@@ -1,6 +1,7 @@
 package bernatriu.gotcompanion.adapters
 
 import android.content.Intent
+import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,7 +10,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import bernatriu.gotcompanion.Fragments.CharactersFragment
 import bernatriu.gotcompanion.Fragments.SpecificCharacterFragment
+import bernatriu.gotcompanion.Fragments.familiesFragment
 import bernatriu.gotcompanion.R
 import bernatriu.gotcompanion.R.id.parent
 import bernatriu.gotcompanion.models.GOTCharacter
@@ -21,7 +24,7 @@ import kotlinx.android.synthetic.main.simple_character.view.*
 import java.lang.Exception
 import java.util.ArrayList
 
-class CharacterAdapter(var list: ArrayList<GOTCharacter>): RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>(){
+class CharacterAdapter(var list: ArrayList<GOTCharacter>,var fragmentActivity: CharactersFragment): RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>(){
 
     public var OnItemClickListener: OnItemClickListener<GOTCharacter>?=null
 
@@ -52,11 +55,14 @@ class CharacterAdapter(var list: ArrayList<GOTCharacter>): RecyclerView.Adapter<
         //buttons:
         viewHolder.button.setOnClickListener {
             try{
-                val fragmentManager = supportFragmentManager
+                val fragmentManager = fragmentActivity.activity?.supportFragmentManager
 
-                val fragmentTransaction = fragmentManager.beginTransaction()
-                fragmentTransaction.replace(R.id.fragmentContainer,SpecificCharacterFragment())
-                fragmentTransaction.commit()
+                fragmentManager?.let {
+
+                    val fragmentTransaction = fragmentManager.beginTransaction()
+                    fragmentTransaction.replace(R.id.fragmentContainer, SpecificCharacterFragment())
+                    fragmentTransaction.commit()
+                }
 
                 //val intent = Intent(viewHolder.button.context, SpecificCharacterFragment::class.java)
                 //intent.putExtra()

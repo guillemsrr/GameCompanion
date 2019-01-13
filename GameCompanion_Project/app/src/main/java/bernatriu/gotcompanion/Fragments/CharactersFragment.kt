@@ -72,7 +72,7 @@ class CharactersFragment : Fragment() {
                     Log.w("MainActivity","characters error on fetching - fetched nothing?")
                 }
                 activity?.let{
-                    characters_list.adapter = CharacterAdapter(list)
+                    characters_list.adapter = CharacterAdapter(list,this@CharactersFragment)
                     characters_list.layoutManager = LinearLayoutManager(activity)
                 }
             }
