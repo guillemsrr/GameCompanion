@@ -75,7 +75,11 @@ class CharactersFragment : Fragment() {
                     Log.w("MainActivity","characters error on fetching - fetched nothing?")
                 }
                 activity?.let{
-                    characters_list.adapter = CharacterAdapter(list,this@CharactersFragment)
+
+
+
+
+                    characters_list.adapter = CharacterAdapter(list)
                     characters_list.layoutManager = LinearLayoutManager(activity)
                 }
             }
@@ -89,39 +93,22 @@ class CharactersFragment : Fragment() {
         })
     }
 
-    fun getCharacter(name : String){
+    fun selectCharactersbyName(originalList : ArrayList<GOTCharacter>, search: String) : ArrayList<GOTCharacter>{
 
-        ApiService.service.getCharacterByName(name).enqueue(object : Callback<GOTCharacterSearch> {
+        var selectedItems : ArrayList<GOTCharacter> = arrayListOf()
 
-
-            override fun onResponse(call: Call<GOTCharacterSearch>, response: Response<GOTCharacterSearch>) {
-                Log.w("MainActivity","character by name fetched")
-
-
-                response.body()?.data?.let {character ->
-
-
-                    Log.e("MainActivity","Character with name ${character.name}, father ${character.father}, house ${character.house}")
-
-
-
-
-                } ?: kotlin.run{
-                    //ERROR
-                    Log.w("MainActivity","characters error on fetching by name- fetched nothing?")
-
+        for (character in originalList){
+            character.name?.let { nameS ->
+                if(nameS.contains(search)){
+                    selectedItems.add(character)
                 }
-            }
-
-            override fun onFailure(call: Call<GOTCharacterSearch>, t: Throwable) {
-
-                Log.e("MainActivity", "Error getting character by name")
-                Log.e("MainActivity",t.message)
 
             }
 
-        })
-
+        }
+        return selectedItems
     }
+
+
 
 }

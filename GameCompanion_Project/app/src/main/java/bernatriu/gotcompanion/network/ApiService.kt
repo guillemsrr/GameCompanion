@@ -1,9 +1,11 @@
 package bernatriu.gotcompanion.network
 
 import bernatriu.gotcompanion.Models.GOTEpisode
+import bernatriu.gotcompanion.Models.GOTEpisodeSearch
 import bernatriu.gotcompanion.models.GOTCharacter
 import bernatriu.gotcompanion.models.GOTCharacterSearch
 import bernatriu.gotcompanion.models.GOTHouse
+import bernatriu.gotcompanion.models.GOTHouseSearch
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -28,6 +30,14 @@ interface ApiService{
     // GET CHARACTER BY NAME
     @GET ("characters/{name}")
     fun getCharacterByName(@Path("name") name: String ) : Call<GOTCharacterSearch>
+
+    //GET HOUSE BY NAME
+    @GET ("houses/{name}")
+    fun getHouseByName(@Path("name") name: String ) : Call<GOTHouseSearch>
+
+    //GET EPISODE BY NAME
+    @GET ("houses/{name}")
+    fun getEpisodeByName(@Path("name") name: String ) : Call<GOTEpisodeSearch>
 
     companion object {
         private var retrofit = Retrofit.Builder()

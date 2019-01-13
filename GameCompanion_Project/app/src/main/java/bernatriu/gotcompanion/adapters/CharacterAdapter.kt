@@ -27,7 +27,7 @@ import kotlinx.android.synthetic.main.simple_character.view.*
 import java.lang.Exception
 import java.util.ArrayList
 
-class CharacterAdapter(var list: ArrayList<GOTCharacter>,var fragmentActivity: CharactersFragment): RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>(){
+class CharacterAdapter(var list: ArrayList<GOTCharacter>): RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>(){
 
     public var OnItemClickListener: OnItemClickListener<GOTCharacter>?=null
 

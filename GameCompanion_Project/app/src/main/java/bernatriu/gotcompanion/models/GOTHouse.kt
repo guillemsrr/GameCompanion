@@ -12,15 +12,8 @@ data class GOTHouse (
     @SerializedName("coatOfArms")      var coatOfArms: String? = null
 
 
-
-
-    //@SerializedName("message")      var messageErr: String? = null
-    //var type: String? = null,
-    //var title: String? = null,
-    //@SerializedName("viewer_count")      var viewerCount: String? = null,
-    //@SerializedName("thumbnail_url")      var thumbnailUrl: String? = null
-
-
-
-
+)
+data class GOTHouseSearch(
+    var message: String? = null,
+    var data: GOTHouse? = null
 )

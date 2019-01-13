@@ -22,7 +22,8 @@ data class GOTEpisode (
     //@SerializedName("viewer_count")      var viewerCount: String? = null,
     //@SerializedName("thumbnail_url")      var thumbnailUrl: String? = null
 
-
-
-
+)
+data class GOTEpisodeSearch(
+    var message: String? = null,
+    var data: GOTEpisode? = null
 )
