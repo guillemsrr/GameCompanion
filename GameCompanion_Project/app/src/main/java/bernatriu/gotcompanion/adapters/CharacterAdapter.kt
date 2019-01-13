@@ -1,11 +1,7 @@
 package bernatriu.gotcompanion.adapters
 
 import android.content.Intent
-import android.os.Bundle
-import android.support.v4.app.FragmentActivity
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,10 +9,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import bernatriu.gotcompanion.Fragments.CharactersFragment
-import bernatriu.gotcompanion.Fragments.SpecificCharacterFragment
-import bernatriu.gotcompanion.Fragments.familiesFragment
 import bernatriu.gotcompanion.R
-import bernatriu.gotcompanion.R.id.parent
 import bernatriu.gotcompanion.activities.CharacterActivity
 import bernatriu.gotcompanion.models.GOTCharacter
 import bernatriu.gotcompanion.utils.OnItemClickListener
@@ -73,26 +66,6 @@ class CharacterAdapter(var list: ArrayList<GOTCharacter>,var fragmentActivity: C
                 characterIntent.putExtra("character",character.name)
                 viewHolder.button.context.startActivity(characterIntent)
 
-                // FRAGMENT CHARACTER PASS
-                /*val fragmentManager = fragmentActivity.activity?.supportFragmentManager
-
-                fragmentManager?.let {
-                    character.name?.let {nameConfirmed ->
-
-
-
-                        val fragmentTransaction = fragmentManager.beginTransaction()
-
-                        fragmentTransaction.replace(R.id.fragmentContainer, newInstance(nameConfirmed))
-                        fragmentTransaction.commit()
-
-                    }
-                }*/
-
-
-                //val intent = Intent(viewHolder.button.context, SpecificCharacterFragment::class.java)
-                //intent.putExtra()
-                //viewHolder.button.context.startActivity(intent)
             }catch(e: Exception){
                 //Log(e.toString())
             }

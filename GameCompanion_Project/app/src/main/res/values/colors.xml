@@ -6,4 +6,5 @@
     <color name="character_bckg">#261b17</color>
     <color name="color_character_name">#000000</color>
     <color name="transparent">#00ffffff</color>
+    <color name="specific_character_bckg">#86725c</color>
 </resources>

@@ -7,4 +7,43 @@
         android:layout_height="match_parent"
         tools:context=".activities.CharacterActivity">
 
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/specific_character_bckg">
+
+            <ImageView
+                    android:id="@+id/character_image"
+                    android:layout_width="140dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/characterName"
+                    android:src="@drawable/default_character_image"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="220dp"
+                    android:layout_marginRight="70dp"/>
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sword_title"
+                android:layout_marginTop="-20dp"/>
+
+        <TextView
+                android:id="@+id/characterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "@string/character_name"
+                android:textSize="@dimen/character_name"
+                android:textColor="@color/color_character_name"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"/>
+
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
